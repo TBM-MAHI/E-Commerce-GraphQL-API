@@ -1,0 +1,4 @@
+/.vscode
+/exampleQuery.graphql
+/node_modules
+/package-lock.json
