@@ -4,7 +4,6 @@ module.exports = {
     Query: { 
         products: () => {
             console.log("retrieving products resolvers");
-
             return productsModel.getAllProducts();
         },
         productsByPrice: (parent,args) => {
@@ -19,7 +18,9 @@ module.exports = {
             return productsModel.addNewProduct(args.id, args.description, args.price);
         },
         addNewProductReview: (_, args) => {
-            return productsModel.addNewProductReview(args.id, args.description, args.price);
+            console.log("logging at /addNewProductReview");
+            console.log(args);
+            return productsModel.addNewProductReview(args.id, args.rating, args.comment);
         }
     }
 }

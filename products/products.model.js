@@ -49,15 +49,22 @@ function get_product_by_Id(id) {
     )
 }
 
-function get_product_by_Id(id) {
-    return products.find(
+function addNewProductReview(id, rating, comment) {
+    console.log(des);
+    let productToUpdate = products.find(
         prod => prod.id == id
     )
+    productToUpdate.reviews.push({
+        
+    })
+
 }
+
 
 module.exports = {
     getAllProducts,
     get_productsByPrice,
     get_product_by_Id,
-    addNewProduct
+    addNewProduct,
+    addNewProductReview
 }

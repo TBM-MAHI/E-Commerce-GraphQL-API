@@ -1,0 +1,49 @@
+
+{
+  products {
+    id
+    description
+    price
+    reviews {
+      rating
+      comment
+    }
+  }
+}
+
+{
+  products {
+    description
+  }
+  orders {
+    id
+    date
+    items {
+      product {
+        id
+        description
+        price
+        reviews {
+          rating
+          comment
+        }
+      }
+      quantity
+    }
+  }
+}
+
+{
+  productsByPrice(min: 40, max: 65) {
+    description
+    price
+  }
+}
+
+mutation{
+  addNewProductReview{
+    id:"1",
+  	rating:5,
+    comment:"great poncho"
+  }
+}

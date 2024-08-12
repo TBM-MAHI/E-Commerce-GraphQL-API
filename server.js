@@ -7,7 +7,7 @@ let { graphqlHTTP }= require("express-graphql")
 let express = require("express")
 let path = require("path");
 let app = express();
-
+let PORT = 3400;
 
 let typesArray = loadFilesSync(path.join(__dirname, "**/*.graphql"), {
     extensions: ['graphql']
@@ -31,4 +31,6 @@ app.use("/graphql", graphqlHTTP({
     graphiql:true
 }))
 
-app.listen(3500, () => { console.log("running a graphQl server on port 3500 \n 👆http://localhost:3500/graphql?") });
+app.listen(PORT, () => {
+    console.log(`running a graphQl server on port 3500 \n 👉  http://localhost:${PORT}/graphql?`)
+});
