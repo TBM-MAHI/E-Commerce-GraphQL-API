@@ -18,8 +18,8 @@ module.exports = {
             return productsModel.addNewProduct(args.id, args.description, args.price);
         },
         addNewProductReview: (_, args) => {
-            console.log("logging at /addNewProductReview");
-            console.log(args);
+           /*  console.log("logging at /addNewProductReview");
+            console.log(args); */
             return productsModel.addNewProductReview(args.id, args.rating, args.comment);
         }
     }

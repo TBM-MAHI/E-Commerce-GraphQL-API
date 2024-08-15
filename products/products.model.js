@@ -50,14 +50,17 @@ function get_product_by_Id(id) {
 }
 
 function addNewProductReview(id, rating, comment) {
-    console.log(des);
     let productToUpdate = products.find(
         prod => prod.id == id
     )
-    productToUpdate.reviews.push({
-        
-    })
-
+    if (productToUpdate) {
+        let rev = {
+            rating,
+            comment
+        };
+        productToUpdate.reviews.push(rev);
+        return productToUpdate;
+    }
 }
 
 

@@ -41,9 +41,19 @@
 }
 
 mutation{
-  addNewProductReview{
-    id:"1",
-  	rating:5,
-    comment:"great poncho"
+ addNewProduct(id:"4",description:"lingerie",price :55.56){
+      id,
+      description
+	}
+}
+
+mutation {
+  addNewProductReview(id: "3", rating: 4, comment: "my titties just fittin") {
+    id
+    description
+    reviews {
+      rating
+      comment
+    }
   }
 }
